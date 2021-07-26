@@ -33,42 +33,36 @@
 
       <h3>Are pets allowed?</h3>
       <div>
-        <input
-            type="radio"
-            v-model="event.pets"
-            :value="1"
-            name="pets"
-          />
-        <label>Yes</label>
+        <BaseRadio
+          v-model="event.pets"
+          :value="1"
+          label="Yes"
+          name="pets"
+        />
       </div>
 
       <div>
-        <input
-          type="radio"
+        <BaseRadio
           v-model="event.pets"
           :value="0"
+          label="No"
           name="pets"
         />
-        <label>No</label>
       </div>
 
       <h3>Extras</h3>
       <div>
-        <input
-          type="checkbox"
+        <BaseCheckbox
           v-model="event.extras.catering"
-          class="field"
+          label="Catering"
         />
-        <label>Catering</label>
       </div>
 
       <div>
-        <input
-          type="checkbox"
+        <BaseCheckbox
           v-model="event.extras.music"
-          class="field"
+          label="Live music"
         />
-        <label>Live music</label>
       </div>
 
       <button class="button -fill-gradient" type="submit">Submit</button>
